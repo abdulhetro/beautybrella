@@ -1,0 +1,83 @@
+.about-hero {
+  background-image: url('https://images.unsplash.com/photo-1615397323136-e8378bf66c25?auto=format&fit=crop&q=80&w=1600');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 80px; /* offset header considering layout */
+}
+
+/* Because header is fixed, we might not need margin top if we want hero to slide under */
+.about-page .about-hero {
+  margin-top: 0;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-subtitle {
+  font-size: 1.25rem;
+  margin-top: 16px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.mb-4 { margin-bottom: 24px; }
+.mt-3 { margin-top: 16px; }
+.mt-5 { margin-top: 40px; }
+.italic { font-style: italic; }
+.font-bold { font-weight: 600; color: var(--text-primary); }
+
+.founder-message {
+  background-color: var(--bg-secondary);
+  padding: 40px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--color-gold);
+}
+
+.founder-message p {
+  margin-bottom: 0;
+}
+
+.rounded-image {
+  border-radius: var(--radius-sm);
+  width: 100%;
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    order: -1;
+  }
+}

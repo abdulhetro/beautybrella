@@ -10,6 +10,7 @@ import TermsConditions from './pages/TermsConditions';
 import Disclaimer from './pages/Disclaimer';
 import RefundPolicy from './pages/RefundPolicy';
 import ShippingPolicy from './pages/ShippingPolicy';
+import PinterestConnect from './pages/PinterestConnect';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="disclaimer" element={<Disclaimer />} />
           <Route path="refunds" element={<RefundPolicy />} />
           <Route path="shipping" element={<ShippingPolicy />} />
+          <Route path="pinterest-connect" element={<PinterestConnect />} />
         </Route>
       </Routes>
     </BrowserRouter>
